@@ -1,3 +1,3 @@
 export const CONFIG = {
-  paymentServiceUrl: 'https://payment-server.herokuapp.com/'
+  paymentServiceUrl: 'https://payment-server.herokuapp.com'
 };;
