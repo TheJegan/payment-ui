@@ -8,19 +8,25 @@ import { routes } from './app.route'
 import { RouterModule } from '@angular/router';
 import { PaymentDetailComponent } from './payment-detail/payment-detail.component';
 import { PaymentService } from './payment.service';
+import { OrganizationCreateComponent } from './organization-create/organization-create.component';
+import { OrganizationDetailComponent } from './organization-detail/organization-detail.component';
+import { OrganizationService } from './organization.service';
+import { UserService } from './user.service'
 
 @NgModule({
   declarations: [
     AppComponent,
     PaymentCreateComponent,
-    PaymentDetailComponent
+    PaymentDetailComponent,
+    OrganizationCreateComponent,
+    OrganizationDetailComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [PaymentService],
+  providers: [PaymentService, UserService, OrganizationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

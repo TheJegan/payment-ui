@@ -1,13 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PaymentService } from '../payment.service';
 import { ActivatedRoute } from '@angular/router';
-
-class Payment {
-  _id: String;
-  propertyId: String;
-  userId: String;
-  amount: Number;
-}
+import { Payment} from "../app.models";
 
 @Component({
   selector: 'app-payment-detail',
@@ -30,7 +24,7 @@ export class PaymentDetailComponent implements OnInit {
         payment => {
           console.log(payment);
           console.log("payment works");
-          this.payment = payment;
+          // this.payment = payment;
         },
         err => {
           console.log(err);
