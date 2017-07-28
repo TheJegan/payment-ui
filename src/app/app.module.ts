@@ -11,7 +11,9 @@ import { PaymentService } from './payment.service';
 import { OrganizationCreateComponent } from './organization-create/organization-create.component';
 import { OrganizationDetailComponent } from './organization-detail/organization-detail.component';
 import { OrganizationService } from './organization.service';
-import { UserService } from './user.service'
+import { UserService } from './user.service';
+import { OrganizationListComponent } from './organization-list/organization-list.component';
+import { AppNavigationComponent } from './app-navigation/app-navigation.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { UserService } from './user.service'
     PaymentCreateComponent,
     PaymentDetailComponent,
     OrganizationCreateComponent,
-    OrganizationDetailComponent
+    OrganizationDetailComponent,
+    OrganizationListComponent,
+    AppNavigationComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { OrganizationService } from "../organization.service"
 import { Organization } from "../app.models";
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-organization-create',
   templateUrl: './organization-create.component.html',
@@ -9,18 +11,24 @@ import { Organization } from "../app.models";
 export class OrganizationCreateComponent implements OnInit {
   private name: string;
   private address: string;
-  constructor(private organizationService : OrganizationService) { }
+  constructor(private router: Router, private organizationService : OrganizationService) { }
 
   ngOnInit() {
   }
 
-  createOrganization(name, address){
+  createOrganization(name, address) {
+    var organization = new Organization();
 
-    console.log('name ' + name.val());
-    console.log('name ' + address.val());
-    this.organizationService.createOrganization(name, address).subscribe(
+    organization.name = name.value;
+    organization.address = address.value;
+    organization.city = "test city";
+    organization.state = "test state";
+    organization.zip = "98125";
+
+    this.organizationService.createOrganization(organization).subscribe(
       success=>{
-        alert('org created');
+        // alert('org created');
+        this.router.navigate([`/organizations`])
       },
       err=>{
         alert("org failed");

@@ -7,21 +7,22 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class PaymentService {
-  private url: string = CONFIG.paymentServiceUrl;
+  private url: string = `${CONFIG.paymentServiceUrl}/api/payments`;
+  // `${this.url}/api/payments/
   constructor(private http: Http) { }
 
   getPaymentById(id: string): Observable<Payment> {
-    return this.http.get(`${this.url}/api/payment/${id}`)
+    return this.http.get(`${id}`)
       .map(this.transformToJSON);
   }
 
   getPayments(): Observable<Payment> {
-    return this.http.get(`${this.url}/api/payment/`)
+    return this.http.get(`${this.url}`)
       .map(this.transformToJSON);
   }
 
   createPayment(payment:Payment) : Observable<Payment> {
-    return this.http.post(`${this.url}/api/payment/`, payment)
+    return this.http.post(`${this.url}`, payment)
     .map(this.transformToJSON);
   }
 

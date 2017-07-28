@@ -10,7 +10,7 @@ export class OrganizationService {
   private url: string = CONFIG.paymentServiceUrl;
   constructor(private http: Http) { }
 
-  getOrganizations(): Observable<Organization> {
+  getOrganizations(): Observable<Organization[]> {
     return this.http.get(`${this.url}/api/organizations`)
     .map(this.transformToJSON);
   }
@@ -20,9 +20,9 @@ export class OrganizationService {
     .map(this.transformToJSON);
   }
 
-  createOrganization(name, address) : Observable<Organization> {
-    return this.http.post(`${this.url}/api/organizations/`, {name: name, address: address})
-    .map(this.transformToJSON);
+  createOrganization(organization) : Observable<Organization> {
+    return this.http.post(`${this.url}/api/organizations/`, organization)
+      .map(this.transformToJSON);
   }
   transformToJSON(res: any) {
     return res.json() || {};
