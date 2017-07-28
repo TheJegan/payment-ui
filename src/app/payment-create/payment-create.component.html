@@ -1,20 +1,23 @@
-
 <p>
-  <input placeholder="1501 NW 56th St" value="{{organization.name}}">
+  <input placeholder="1501 NW 56th St" value="{{organization.name}}" class="form-control">
 </p>
 
 <p>
-  <input placeholder="apt 217" value="{{organization.address}}">
+  <input placeholder="apt 217" value="{{organization.address}}" class="form-control">
 </p>
 
 <p>
-  <input placeholder="Seattle WA 98107" value="{{organization.city}}">
+  <input placeholder="Seattle WA 98107" value="{{organization.city}}" class="form-control">
 </p>
 
-<p>
-  <input placeholder="amount" #amount> *
-</p>
 
+<div class="input-group">
+  <div class="input-group-addon">$</div>
+  <input placeholder="amount (required)" class="form-control" #amount>
+  <div class="input-group-addon">.00</div>
+</div>
+
+<p></p>
 <p>
-  <button (click)="create(amount)"> Submit </button>
+  <button (click)="create(amount)" type="button" class="btn btn-primary"> Submit </button>
 </p>
