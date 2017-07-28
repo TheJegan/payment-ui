@@ -13,6 +13,6 @@ export const routes: Routes = [
   { path: 'organization', component: OrganizationCreateComponent },
   { path: 'organizations', component: OrganizationListComponent },
   { path: 'organization/:id', component: OrganizationDetailComponent },
-  { path: 'organization/:id/payment', component: PaymentCreateComponent },
-  { path: 'payment/:id/', component: PaymentDetailComponent },
+  { path: 'organization/:orgId/payment', component: PaymentCreateComponent },
+  { path: 'payment/:id', component: PaymentDetailComponent },
 ];

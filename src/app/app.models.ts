@@ -1,4 +1,5 @@
 export class Organization{
+    _id: string;
     name: String;
     address: String;
     city: String;
@@ -7,12 +8,14 @@ export class Organization{
 }
 
 export class Payment{
-    userId: string;
-    propertyId: string;
+    _id: string;
+    _user: string;
+    _property: string;
     amount: string;
 }
 
 export class User{
+    _id: string;
     name: string;
     address: string;
 }

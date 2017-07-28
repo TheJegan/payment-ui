@@ -14,17 +14,14 @@ export class PaymentDetailComponent implements OnInit {
   private payment: Payment = new Payment();
 
   constructor(private route: ActivatedRoute, private paymentService: PaymentService) {
-    // this.paymentService.getPaymentById()
     route.params.subscribe(params => {
       this.paymentId = params['id'];
-
       console.log(this.paymentId);
-
       this.getPayment(this.paymentId).subscribe(
         payment => {
           console.log(payment);
           console.log("payment works");
-          // this.payment = payment;
+          this.payment = payment;
         },
         err => {
           console.log(err);
@@ -37,7 +34,7 @@ export class PaymentDetailComponent implements OnInit {
   }
 
   getPayment(id) {
-    return this.paymentService.getPaymentById(id);
+    return this.paymentService.getPaymentById(id)
   }
 
 }

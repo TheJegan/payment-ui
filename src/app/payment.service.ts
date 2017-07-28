@@ -12,7 +12,7 @@ export class PaymentService {
   constructor(private http: Http) { }
 
   getPaymentById(id: string): Observable<Payment> {
-    return this.http.get(`${id}`)
+    return this.http.get(`${this.url}/${id}`)
       .map(this.transformToJSON);
   }
 
