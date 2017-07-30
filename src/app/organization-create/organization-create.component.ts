@@ -16,19 +16,19 @@ export class OrganizationCreateComponent implements OnInit {
   ngOnInit() {
   }
 
-  createOrganization(name, address) {
+  createOrganization(name, address, city, state, zip) {
     var organization = new Organization();
 
     organization.name = name.value;
     organization.address = address.value;
-    organization.city = "test city";
-    organization.state = "test state";
-    organization.zip = "98125";
+    organization.city = city.value;
+    organization.state = state.value;
+    organization.zip = zip.value;
 
     this.organizationService.createOrganization(organization).subscribe(
       success=>{
         // alert('org created');
-        this.router.navigate([`/organizations`])
+        this.router.navigate([`/organization/list`])
       },
       err=>{
         alert("org failed");

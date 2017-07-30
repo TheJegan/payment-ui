@@ -13,7 +13,8 @@ import { OrganizationDetailComponent } from './organization-detail/organization-
 import { OrganizationService } from './organization.service';
 import { UserService } from './user.service';
 import { OrganizationListComponent } from './organization-list/organization-list.component';
-import { AppNavigationComponent } from './app-navigation/app-navigation.component'
+import { AppNavigationComponent } from './app-navigation/app-navigation.component';
+import { PaymentListComponent } from './payment-list/payment-list.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AppNavigationComponent } from './app-navigation/app-navigation.componen
     OrganizationCreateComponent,
     OrganizationDetailComponent,
     OrganizationListComponent,
-    AppNavigationComponent
+    AppNavigationComponent,
+    PaymentListComponent
   ],
   imports: [
     BrowserModule,

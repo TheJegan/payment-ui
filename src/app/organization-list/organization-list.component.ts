@@ -27,4 +27,6 @@ export class OrganizationListComponent implements OnInit {
         alert("Failed");
       });
   }
+
+  isList
 }

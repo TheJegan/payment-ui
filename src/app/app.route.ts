@@ -8,11 +8,14 @@ import { PaymentDetailComponent } from './payment-detail/payment-detail.componen
 import { OrganizationCreateComponent } from './organization-create/organization-create.component';
 import { OrganizationDetailComponent } from './organization-detail/organization-detail.component';
 import { OrganizationListComponent } from './organization-list/organization-list.component';
+import { PaymentListComponent } from './payment-list/payment-list.component'
 
 export const routes: Routes = [
-  { path: 'organization', component: OrganizationCreateComponent },
-  { path: 'organizations', component: OrganizationListComponent },
+   { path: '', redirectTo: 'organization/list', pathMatch: 'full' },
+  { path: 'organization/create', component: OrganizationCreateComponent },
+  { path: 'organization/list', component: OrganizationListComponent },
   { path: 'organization/:id', component: OrganizationDetailComponent },
-  { path: 'organization/:orgId/payment', component: PaymentCreateComponent },
+  { path: 'organization/:orgId/payment-create', component: PaymentCreateComponent },
+  { path: 'organization/:orgId/payment-list', component: PaymentListComponent },
   { path: 'payment/:id', component: PaymentDetailComponent },
 ];

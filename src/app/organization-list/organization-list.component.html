@@ -1,3 +1,7 @@
 <div *ngFor="let organization of organizations">
-  <a href="/organization/{{organization._id}}/payment"> {{organization.name}} </a>
+  <a href="/organization/{{organization._id}}"> {{organization.name}} </a>
+</div>
+
+<div *ngIf="!organizations.length">
+  No organization :(
 </div>
