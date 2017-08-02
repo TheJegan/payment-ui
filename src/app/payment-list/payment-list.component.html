@@ -1,0 +1,8 @@
+<div *ngFor="let payment of payments ">
+  {{payment.amount}}
+</div>
+
+
+<div *ngIf="!payments.length">
+  You got no payments at this time :(
+</div>
