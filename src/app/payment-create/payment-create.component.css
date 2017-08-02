@@ -1,0 +1,10 @@
+.payment-header {
+  color: #057fc6;
+  /* font-style: italic; */
+  font-style: initial;
+}
+
+span{
+  font-style: italic;
+  color: #696969;
+}

@@ -14,7 +14,11 @@ import { OrganizationService } from './organization.service';
 import { UserService } from './user.service';
 import { OrganizationListComponent } from './organization-list/organization-list.component';
 import { AppNavigationComponent } from './app-navigation/app-navigation.component';
-import { PaymentListComponent } from './payment-list/payment-list.component'
+import { PaymentListComponent } from './payment-list/payment-list.component';
+import { LoginComponent } from './login/login.component';
+import { LoginService } from './login.service';
+import { AuthenticationService } from './authentication.service';
+import { SignupComponent } from './signup/signup.component'
 
 @NgModule({
   declarations: [
@@ -25,14 +29,16 @@ import { PaymentListComponent } from './payment-list/payment-list.component'
     OrganizationDetailComponent,
     OrganizationListComponent,
     AppNavigationComponent,
-    PaymentListComponent
+    PaymentListComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [PaymentService, UserService, OrganizationService],
+  providers: [PaymentService, UserService, OrganizationService, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
