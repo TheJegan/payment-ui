@@ -1,7 +1,7 @@
 <p><input name="name" placeholder="name"  class="form-control" #name></p>
-<p><input name="address" placeholder="address"  class="form-control" #address></p>
-<p><input name="city" placeholder="city"  class="form-control" #city></p>
-<p><input name="state" placeholder="state"  class="form-control" #state></p>
-<p><input name="zip" placeholder="zip"  class="form-control" #zip></p>
+<p><input name="address" placeholder="address" value="123 sesame st"  class="form-control" #address></p>
+<p><input name="city" placeholder="city"  value="Seattle" class="form-control" #city></p>
+<p><input name="state" placeholder="state" value="WA" class="form-control" #state></p>
+<p><input name="zip" placeholder="zip" value="98109" class="form-control" #zip></p>
 
 <button (click)="createOrganization(name, address, city, state, zip)" type="button" class="btn btn-primary"> create </button>

@@ -26,9 +26,8 @@ export class OrganizationCreateComponent implements OnInit {
     organization.zip = zip.value;
 
     this.organizationService.createOrganization(organization).subscribe(
-      success=>{
-        // alert('org created');
-        this.router.navigate([`/organization/list`])
+      org=>{
+        this.router.navigate([`/login/${org._id}`]);
       },
       err=>{
         alert("org failed");

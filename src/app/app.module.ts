@@ -18,7 +18,8 @@ import { PaymentListComponent } from './payment-list/payment-list.component';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './login.service';
 import { AuthenticationService } from './authentication.service';
-import { SignupComponent } from './signup/signup.component'
+import { SignupComponent } from './signup/signup.component';
+import { OrganizationSearchComponent } from './organization-search/organization-search.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SignupComponent } from './signup/signup.component'
     AppNavigationComponent,
     PaymentListComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    OrganizationSearchComponent
   ],
   imports: [
     BrowserModule,

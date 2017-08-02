@@ -19,5 +19,5 @@ export const routes: Routes = [
   { path: 'organization/:orgId/payment-create', component: PaymentCreateComponent },
   { path: 'organization/:orgId/payment-list', component: PaymentListComponent },
   { path: 'payment/:id', component: PaymentDetailComponent },
-  { path: 'login', component: LoginComponent},
+  { path: 'login/:id', component: LoginComponent},
 ];
