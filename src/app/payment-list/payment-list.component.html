@@ -1,5 +1,5 @@
 <div *ngFor="let payment of payments ">
-  {{payment.amount}}
+  you received a payment of <span> ${{payment.amount}} </span> on <span>  {{getPaymentDate(payment.createdDate)}} </span>
 </div>
 
 

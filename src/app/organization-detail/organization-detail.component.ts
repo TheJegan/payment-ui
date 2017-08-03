@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { OrganizationService } from "../organization.service";
+import { Payment } from '../app.models';
 @Component({
   selector: 'app-organization-detail',
   templateUrl: './organization-detail.component.html',
@@ -8,7 +9,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class OrganizationDetailComponent implements OnInit {
   private organizationId: string;
-  constructor(private router: Router, private route: ActivatedRoute, ) {
+  private payments: Payment[];
+  constructor(private router: Router, private route: ActivatedRoute, private organizationSvc: OrganizationService) {
 
     route.params.subscribe(params => {
       this.organizationId = params['id'];
@@ -18,5 +20,11 @@ export class OrganizationDetailComponent implements OnInit {
   ngOnInit() {
   }
 
+  // getOrganization() {
+  //   this.organizationSvc.getOrganizationPayments(this.organizationId).subscribe(payments => {
+  //     this.payments = payments;
+  //   }, error => {
 
+  //   });
+  // }
 }

@@ -4,7 +4,8 @@ export class Organization{
     address: String;
     city: String;
     state: String;
-    zip: String
+    zip: String;
+    createdDate: string;
 }
 
 export class Payment{
@@ -12,6 +13,7 @@ export class Payment{
     _user: string;
     _property: string;
     amount: string;
+    createdDate: string;
 }
 
 export class User{
