@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../authentication.service'
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,8 +8,14 @@ import { AuthenticationService } from '../authentication.service'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  private organizationId;
+  constructor(private authenticationSvc: AuthenticationService, private router: Router, private route: ActivatedRoute) {
 
-  constructor(private authenticationSvc : AuthenticationService) { }
+    route.params.subscribe(params => {
+      this.organizationId = params["id"];
+    })
+
+  }
 
   ngOnInit() {
   }
@@ -18,9 +25,15 @@ export class LoginComponent implements OnInit {
     this.authenticationSvc.login(username.value, password.value)
       .subscribe(res => {
         console.log(res);
+        // this.auth.currentUser.setDisplayName(usr.displayName);
+        // this.authenticationSvc.currentUser.setToken(res);
+        if (res) {
+          // localStorage.setItem('organizationId', this.organizationId);
+          this.router.navigate([`/organization/${this.organizationId}`]);
+        }
       },
       err => {
         console.log(err);
-    })
+      })
   }
 }

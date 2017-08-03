@@ -19,7 +19,8 @@ import { LoginComponent } from './login/login.component';
 import { LoginService } from './login.service';
 import { AuthenticationService } from './authentication.service';
 import { SignupComponent } from './signup/signup.component';
-import { OrganizationSearchComponent } from './organization-search/organization-search.component'
+import { OrganizationSearchComponent } from './organization-search/organization-search.component';
+import { HomeComponent } from './home/home.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { OrganizationSearchComponent } from './organization-search/organization-
     PaymentListComponent,
     LoginComponent,
     SignupComponent,
-    OrganizationSearchComponent
+    OrganizationSearchComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

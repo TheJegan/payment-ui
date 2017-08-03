@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { OrganizationService } from '../organization.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-organization-search',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrganizationSearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private organizationService: OrganizationService, private router: Router) { }
 
   ngOnInit() {
   }
 
+  searchByName(name) {
+    this.organizationService.getOrganizationByName(name.value)
+      .subscribe(organization => {
+        if (organization) {
+          // this.router.navigate([``])
+          this.router.navigate([`/login/${organization._id}`]);
+        }
+      })
+  }
 }

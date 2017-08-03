@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class OrganizationDetailComponent implements OnInit {
   private organizationId: string;
   constructor(private router: Router, private route: ActivatedRoute, ) {
+
     route.params.subscribe(params => {
       this.organizationId = params['id'];
     });

@@ -20,6 +20,11 @@ export class OrganizationService {
     .map(this.transformToJSON);
   }
 
+  getOrganizationByName(name): Observable<Organization>{
+    return this.http.get(`${this.url}/api/organizations/search?name=${name}`)
+      .map(this.transformToJSON);
+  }
+
   getOrganizationPayments(id): Observable<Payment[]> {
     return this.http.get(`${this.url}/api/organizations/${id}/payments`)
       .map(this.transformToJSON);
