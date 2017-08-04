@@ -1,0 +1,28 @@
+
+
+.__row
+{
+    width:100%;
+    padding-bottom: 65px;
+}
+
+.__left {
+	font-size: 11.5pt;
+	font-family: Georgia;
+	display: inline;
+    float:left;
+}
+.__right {
+	margin: 0.5em 0 0.5em 0;
+	padding: 0.5em 0 0.5em 10px;
+	font-size: 12pt;
+	font-family: Georgia;
+	color: white;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	display: inline;
+  float:right;
+  margin-top: 16px;
+
+}
