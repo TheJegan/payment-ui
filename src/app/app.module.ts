@@ -20,7 +20,12 @@ import { LoginService } from './login.service';
 import { AuthenticationService } from './authentication.service';
 import { SignupComponent } from './signup/signup.component';
 import { OrganizationSearchComponent } from './organization-search/organization-search.component';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { OrderByPipe } from './orderby';
+import { ApartmentCreateComponent } from './apartment-create/apartment-create.component';
+import { ApartmentDetailComponent } from './apartment-detail/apartment-detail.component';
+import { ApartmentEditComponent } from './apartment-edit/apartment-edit.component';
+import { ApartmentDeleteComponent } from './apartment-delete/apartment-delete.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +40,12 @@ import { HomeComponent } from './home/home.component'
     LoginComponent,
     SignupComponent,
     OrganizationSearchComponent,
-    HomeComponent
+    HomeComponent,
+    OrderByPipe,
+    ApartmentCreateComponent,
+    ApartmentDetailComponent,
+    ApartmentEditComponent,
+    ApartmentDeleteComponent
   ],
   imports: [
     BrowserModule,

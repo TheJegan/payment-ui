@@ -5,11 +5,10 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { MomentModule } from 'angular2-moment';
 
-
 @Component({
   selector: 'app-payment-list',
   templateUrl: './payment-list.component.html',
-  styleUrls: ['./payment-list.component.css']
+  styleUrls: ['./payment-list.component.css'],
 })
 export class PaymentListComponent implements OnInit {
   private payments: Payment[] = [];
@@ -44,6 +43,5 @@ export class PaymentListComponent implements OnInit {
 
   getPaymentDate(date) {
     return date;
-
   }
 }

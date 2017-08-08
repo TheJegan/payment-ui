@@ -26,3 +26,10 @@
   margin-top: 16px;
 
 }
+
+
+.sb-navbar { background-color: white; border-bottom: 1px solid #eceeef; }
+.sb-navbar .navbar-toggler { font-size: 12px; text-transform: uppercase; padding: 13px; font-family: 'PT Sans Caption', Helvetica, Arial, sans-serif; font-weight: 700; }
+.sb-navbar .navbar-toggler i { margin-right: 2px; font-size: 10px; }
+.sb-navbar .navbar-brand { color: rgba(0, 0, 0, 0.5); font-family: 'PT Sans Caption', Helvetica, Arial, sans-serif; font-weight: 700; }
+.sb-navbar .navbar-right li a:focus { outline: none; }
