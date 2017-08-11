@@ -26,6 +26,7 @@ import { ApartmentCreateComponent } from './apartment-create/apartment-create.co
 import { ApartmentDetailComponent } from './apartment-detail/apartment-detail.component';
 import { ApartmentEditComponent } from './apartment-edit/apartment-edit.component';
 import { ApartmentDeleteComponent } from './apartment-delete/apartment-delete.component';
+import { MomentModule } from 'angular2-moment';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { ApartmentDeleteComponent } from './apartment-delete/apartment-delete.co
   imports: [
     BrowserModule,
     HttpModule,
+    MomentModule,
     RouterModule.forRoot(routes)
   ],
   providers: [PaymentService, UserService, OrganizationService, AuthenticationService],
